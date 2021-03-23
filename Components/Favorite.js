@@ -11,7 +11,7 @@ import {
 import {
   generateNewAccessToken,
   getFavoriteImage,
-  // getImageFromID,
+  getImageFromID,
 } from "../API/IMGUR_API";
 import ImageItem from "./ImageItem";
 
@@ -41,15 +41,27 @@ class Favorite extends React.Component {
     // We load all images
     generateNewAccessToken()
       .then((userData) => {
-        this.setState({ user: { ...userData } });
         var images = getFavoriteImage(
           userData.access_token,
           userData.account_username
         )
           .then((imagesData) => {
-            this.setState({
-              images: imagesData.data,
-              isLoading: false,
+            imagesData.data.forEach((image) => {
+              getImageFromID(
+                userData.access_token,
+                userData.account_username,
+                image.cover
+              )
+                .then((link) => {
+                  image.link = link;
+                })
+                .finally(() => {
+                  this.setState({
+                    user: userData,
+                    images: imagesData.data,
+                    isLoading: false,
+                  });
+                });
             });
           })
           .catch((err) => {
@@ -67,8 +79,6 @@ class Favorite extends React.Component {
     } else {
       return (
         <View style={styles.content}>
-          <Text>Favorite</Text>
-
           <FlatList
             renderItem={({ item }) => <ImageItem image={item} />}
             numColumns={2}
@@ -87,7 +97,9 @@ class Favorite extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.main_container}>
+        <StatusBar animated={true} backgroundColor="#292B5F" />
         {this._displayLoading()}
+        <Text>Favorite</Text>
         {this._displayResult()}
       </SafeAreaView>
     );
@@ -97,8 +109,12 @@ class Favorite extends React.Component {
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,
-    justifyContent: "center",
-    alignContent: "center",
+    marginTop: StatusBar.currentHeight || 0,
+    backgroundColor: "#fff",
+  },
+  content: {
+    flex: 1,
+    padding: 5,
   },
   infoResultText: {
     color: "#ccc",

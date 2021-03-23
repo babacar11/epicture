@@ -35,13 +35,16 @@ class Home extends React.Component {
     // We load all images
     generateNewAccessToken()
       .then((userData) => {
-        this.setState({ user: { ...userData } });
         var images = getAllImages(
           userData.access_token,
           userData.account_username
         )
           .then((imagesData) => {
-            this.setState({ images: imagesData.data, isLoading: false });
+            this.setState({
+              user: userData,
+              images: imagesData.data,
+              isLoading: false,
+            });
           })
           .catch((err) => {
             console.log("Error Loading images");

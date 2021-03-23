@@ -7,31 +7,24 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Image } from "react-native-web";
+import { getImageFromID } from "../API/IMGUR_API";
 
 class ImageItem extends React.Component {
   constructor(props) {
     super(props);
   }
-  _formatLink(image) {
-    let arr = [".jpg", ".png", ".jpeg", ".gif"];
 
-    if (arr.includes(image.link.toString())) {
-      ("");
-      let imageType = image.type.split("/")[1];
-      image.link += "." + imageType;
-    }
-    return image.link;
-  }
+  componentDidMount() {}
   render() {
     return (
       <TouchableOpacity style={styles.main_container}>
         <ImageBackground
           style={styles.img_container}
           source={{
-            uri: this._formatLink(this.props.image),
+            uri: this.props.image.link,
           }}
         ></ImageBackground>
-        <Text> {this.props.image.link}</Text>
+        {/*<Text> {this.props.image.link}</Text>*/}
       </TouchableOpacity>
     );
   }

@@ -13,7 +13,7 @@ export async function generateNewAccessToken() {
   bodyFormData.append("client_id", CLIENT_ID);
   bodyFormData.append("client_secret", CLIENT_SECRET);
   bodyFormData.append("grant_type", "refresh_token");
-  bodyFormData.append("response_type", "token");
+  // bodyFormData.append("response_type", "token");
 
   // const data = await fetch("https://api.imgur.com/oauth2/token", {
   //   method: "POST",
@@ -45,26 +45,6 @@ export async function generateNewAccessToken() {
 }
 
 export async function getAllImages(token, account_username) {
-  // const imagesArr = await fetch(
-  //   `https://api.imgur.com/3/account/${account_username}/images`,
-  //   {
-  //     method: "GET",
-  //     headers: new Headers({
-  //       Authorization: "Bearer " + token,
-  //       "Content-type": "application/json",
-  //       Accept: "application/json",
-  //       "Accept-Ranges": "bytes",
-  //       Connection: "keep-alive",
-  //     }),
-  //   }
-  // )
-  //   .then((resp) => {
-  //     console.log("Images All", resp.data);
-  //     return resp;
-  //   })
-  //   .catch((err) => {
-  //     console.log("Can't fetch Images");
-  //   });
   let imagesArr = await axios({
     method: "get",
     url: `https://api.imgur.com/3/account/${account_username}/images`,
@@ -75,7 +55,6 @@ export async function getAllImages(token, account_username) {
     },
   })
     .then((resp) => {
-      console.log("Token", resp.data);
       return resp.data;
     })
     .catch((err) => {
@@ -100,19 +79,22 @@ export async function getFavoriteImage(token, account_username) {
   return favoriteImageData;
 }
 //
-// export async function getImageFromID(token, account_username, imageID) {
-//   const imageData = await axios({
-//     method: "get",
-//     url: `https://api.imgur.com/3/account/${account_username}/image/${imageID}`,
-//     responseType: "json",
-//     headers: {
-//       Authorization: "Bearer " + token,
-//       "Content-type": "application/json",
-//     },
-//   }).then((resp) => {
-//     // return resp.data;
-//     console.log("Request ID", resp);
-//   });
-//
-//   return imageData;
-// }
+export async function getImageFromID(token, account_username, imageID) {
+  const imageData = await axios({
+    method: "get",
+    url: `https://api.imgur.com/3/account/${account_username}/image/${imageID}`,
+    responseType: "json",
+    headers: {
+      Authorization: "Bearer " + token,
+      "Content-type": "application/json",
+    },
+  })
+    .then((resp) => {
+      return resp.data.data.link;
+    })
+    .catch((err) => {
+      console.log("Error", err);
+    });
+
+  return imageData;
+}
