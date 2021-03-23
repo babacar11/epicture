@@ -7,7 +7,9 @@ import {
   StatusBar,
   Image,
   TouchableOpacity,
+  AsyncStorage,
 } from "react-native";
+
 import { WebView } from "react-native-webview";
 import { CLIENT_ID } from "../API/config";
 import Navigation from "../Navigation/Navigation";
@@ -29,43 +31,68 @@ class Login extends React.Component {
             CLIENT_ID +
             "&response_type=token",
         }}
-        // onError={ (err)=>{
-        //     this.webView.reload();
-        // } }
+        onError={(err) => {
+          console.log(err);
+        }}
         // ref={ref => { this.webView = ref; }}
         originWhitelist={["https://*"]}
         onNavigationStateChange={this.handleWebViewNavigationStateChange}
+        onContentProcessDidTerminate={() => {
+          console.log("Hello");
+        }}
+        cacheEnabled={false}
+        sharedCookiesEnabled={false}
+        thirdPartyCookiesEnabled={false}
       />
     );
   }
 
-  handleWebViewNavigationStateChange(navstate) {
-    console.log(navstate);
-  }
+  handleWebViewNavigationStateChange = (navstate) => {
+    let { url } = navstate;
+    if (url.includes("refresh_token")) {
+      console.log("UEL", url);
 
-  _loginBtnHandler() {}
+      this.props.auth();
+    }
+  };
+
+  _loginBtnHandler() {
+    this.setState({ showWelcomingScreen: false });
+  }
 
   _welcomingScreen() {
     if (this.state.showWelcomingScreen) {
       var sourceImage = require("../Images/welcome.jpg");
 
       return (
-        <SafeAreaView>
+        <View style={styles.content}>
           <Image style={styles.img} source={sourceImage} />
           <TouchableOpacity
             style={styles.loginBtn}
-            onPress={this._loginBtnHandler}
+            onPress={this._loginBtnHandler.bind(this)}
           >
             <Text style={styles.loginTxt}>Log in</Text>
           </TouchableOpacity>
-        </SafeAreaView>
+        </View>
       );
     } else {
       return this._showData();
     }
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    const clearAppData = async function () {
+      // try {
+      //   const keys = await AsyncStorage.getAllKeys();
+      //   await AsyncStorage.multiRemove(keys);
+      // } catch (error) {
+      //   console.error("Error clearing app data.");
+      // }
+      // CookieManager.clearAll(true).then((res) => {
+      //   console.log("LoginScreen CookieManager.clearAll =>", res);
+      // });
+    };
+  }
 
   render() {
     return (
@@ -83,13 +110,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
   },
+  content: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   img: {
     width: "100%",
   },
   loginBtn: {
     backgroundColor: "#292B5F",
     color: "#fff",
-    height: "5%",
+    width: 200,
+    marginTop: 30,
+    padding: 10,
   },
   loginTxt: {
     color: "#fff",

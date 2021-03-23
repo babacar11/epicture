@@ -47,7 +47,7 @@ class Home extends React.Component {
             });
           })
           .catch((err) => {
-            console.log("Error Loading images");
+            console.log("Error Loading images", err);
           });
       })
 

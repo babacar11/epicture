@@ -58,7 +58,7 @@ export async function getAllImages(token, account_username) {
       return resp.data;
     })
     .catch((err) => {
-      console.log();
+      // console.log(err);
     });
   return imagesArr;
 }
