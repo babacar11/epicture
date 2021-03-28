@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/API/IMGUR_API.js | Epicture</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">API</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateNewAccessToken">generateNewAccessToken</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllImages">getAllImages</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFavoriteImage">getFavoriteImage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getImageFromID">getImageFromID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-uploadImage">uploadImage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ACCOUNT_USERNAME">ACCOUNT_USERNAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CLIENT_ID">CLIENT_ID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CLIENT_SECRET">CLIENT_SECRET</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REFRESH_TOKEN">REFRESH_TOKEN</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/API/IMGUR_API.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {
+  CLIENT_ID,
+  CLIENT_SECRET,
+  REFRESH_TOKEN,
+  ACCOUNT_USERNAME,
+} from &quot;./config&quot;;
+import axios from &quot;axios&quot;;
+import FsStream from &quot;react-native-fs-stream&quot;;
+
+/**
+ * Generate new Token
+ * @returns {Promise&lt;unknown&gt;}
+ */
+export async function generateNewAccessToken() {
+  var bodyFormData = new FormData();
+
+  bodyFormData.append(&quot;refresh_token&quot;, REFRESH_TOKEN);
+  bodyFormData.append(&quot;client_id&quot;, CLIENT_ID);
+  bodyFormData.append(&quot;client_secret&quot;, CLIENT_SECRET);
+  bodyFormData.append(&quot;grant_type&quot;, &quot;refresh_token&quot;);
+  bodyFormData.append(&quot;response_type&quot;, &quot;token&quot;);
+
+  const data = await axios
+    .post(&quot;https://api.imgur.com/oauth2/token&quot;, bodyFormData, {
+      headers: { &quot;Content-Type&quot;: &quot;multipart/form-data&quot; },
+    })
+    .then((resp) =&gt; {
+      return resp.data;
+    })
+    .catch((err) =&gt; {
+      console.log(&quot;Axios key err&quot;, err);
+    });
+
+  return data;
+}
+
+/**
+ * List all images from connected user
+ * @param token
+ * @param account_username
+ * @returns {Promise&lt;unknown&gt;}
+ */
+export async function getAllImages(token, account_username) {
+  let imagesArr = await axios({
+    method: &quot;get&quot;,
+    url: `https://api.imgur.com/3/account/${account_username}/images`,
+    responseType: &quot;json&quot;,
+    headers: {
+      Authorization: &quot;Bearer &quot; + token,
+      &quot;Content-type&quot;: &quot;application/json&quot;,
+    },
+  })
+    .then((resp) =&gt; {
+      return resp.data;
+    })
+    .catch((err) =&gt; {
+      // console.log(err);
+    });
+  return imagesArr;
+}
+
+export async function getFavoriteImage(token, account_username) {
+  const favoriteImageData = await axios({
+    method: &quot;get&quot;,
+    url: `https://api.imgur.com/3/account/${account_username}/favorites`,
+    responseType: &quot;json&quot;,
+    headers: {
+      Authorization: &quot;Bearer &quot; + token,
+      &quot;Content-type&quot;: &quot;application/json&quot;,
+    },
+  }).then((resp) =&gt; {
+    return resp.data;
+  });
+
+  return favoriteImageData;
+}
+//
+export async function getImageFromID(token, account_username, imageID) {
+  const imageData = await axios({
+    method: &quot;get&quot;,
+    url: `https://api.imgur.com/3/account/${account_username}/image/${imageID}`,
+    responseType: &quot;json&quot;,
+    headers: {
+      Authorization: &quot;Bearer &quot; + token,
+      &quot;Content-type&quot;: &quot;application/json&quot;,
+    },
+  })
+    .then((resp) =&gt; {
+      return resp.data.data.link;
+    })
+    .catch((err) =&gt; {
+      console.log(&quot;Error&quot;, err);
+    });
+
+  return imageData;
+}
+
+export async function uploadImage(
+  imageURI,
+  imageType,
+  imageName,
+  imageTitle,
+  imageDescription
+) {
+  var bodyFormData = new FormData();
+
+  bodyFormData.append(&quot;image&quot;, imageURI);
+  bodyFormData.append(&quot;album&quot;, null);
+  bodyFormData.append(&quot;type&quot;, imageType);
+  bodyFormData.append(&quot;name&quot;, imageName);
+  bodyFormData.append(&quot;title&quot;, imageTitle);
+  bodyFormData.append(&quot;description&quot;, imageDescription);
+
+  var token = &quot;de48853f14f4b2d79213d9e432ba30862df9a7af&quot;;
+  const data = await axios
+    .post(&quot;https://api.mgur.com/3/upload&quot;, bodyFormData, {
+      headers: {
+        // Authorization: &quot;Bearer &quot; + token,
+        &quot;Client-ID&quot;: CLIENT_ID,
+        &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,
+      },
+    })
+    .then((resp) =&gt; {
+      console.log(&quot;Success&quot;, resp);
+      return resp.data;
+    })
+    .catch((err) =&gt; {
+      console.log(&quot;Sorry fail to upload the file&quot;, err);
+    });
+
+  // return data;
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

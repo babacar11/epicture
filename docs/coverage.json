@@ -1,0 +1,26 @@
+{
+  "coverage": "22.22%",
+  "expectCount": 9,
+  "actualCount": 2,
+  "files": {
+    "src/API/config.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "src/API/IMGUR_API.js": {
+      "expectCount": 5,
+      "actualCount": 2,
+      "undocumentLines": [
+        62,
+        78,
+        98
+      ]
+    }
+  }
+}

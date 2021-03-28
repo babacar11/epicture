@@ -1,0 +1,906 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/API/config.js",
+    "content": "export const CLIENT_ID = \"316ffd6eef7300b\";\nexport const ACCOUNT_USERNAME = \"babacar11\";\nexport const CLIENT_SECRET = \"b103c5a4e0047ebff32f3b57b621826123b87eab\";\nexport const REFRESH_TOKEN = \"77c01708d73ff77125425082dc8efc47c9ee7724\";\n",
+    "static": true,
+    "longname": "D:/Epitech/Epicture/app/Epicture/src/API/config.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "CLIENT_ID",
+    "memberof": "src/API/config.js",
+    "static": true,
+    "longname": "src/API/config.js~CLIENT_ID",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/config.js",
+    "importStyle": "{CLIENT_ID}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "ACCOUNT_USERNAME",
+    "memberof": "src/API/config.js",
+    "static": true,
+    "longname": "src/API/config.js~ACCOUNT_USERNAME",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/config.js",
+    "importStyle": "{ACCOUNT_USERNAME}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "CLIENT_SECRET",
+    "memberof": "src/API/config.js",
+    "static": true,
+    "longname": "src/API/config.js~CLIENT_SECRET",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/config.js",
+    "importStyle": "{CLIENT_SECRET}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "variable",
+    "name": "REFRESH_TOKEN",
+    "memberof": "src/API/config.js",
+    "static": true,
+    "longname": "src/API/config.js~REFRESH_TOKEN",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/config.js",
+    "importStyle": "{REFRESH_TOKEN}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "file",
+    "name": "src/API/IMGUR_API.js",
+    "content": "import {\n  CLIENT_ID,\n  CLIENT_SECRET,\n  REFRESH_TOKEN,\n  ACCOUNT_USERNAME,\n} from \"./config\";\nimport axios from \"axios\";\nimport FsStream from \"react-native-fs-stream\";\n\n/**\n * Generate new Token\n * @returns {Promise<unknown>}\n */\nexport async function generateNewAccessToken() {\n  var bodyFormData = new FormData();\n\n  bodyFormData.append(\"refresh_token\", REFRESH_TOKEN);\n  bodyFormData.append(\"client_id\", CLIENT_ID);\n  bodyFormData.append(\"client_secret\", CLIENT_SECRET);\n  bodyFormData.append(\"grant_type\", \"refresh_token\");\n  bodyFormData.append(\"response_type\", \"token\");\n\n  const data = await axios\n    .post(\"https://api.imgur.com/oauth2/token\", bodyFormData, {\n      headers: { \"Content-Type\": \"multipart/form-data\" },\n    })\n    .then((resp) => {\n      return resp.data;\n    })\n    .catch((err) => {\n      console.log(\"Axios key err\", err);\n    });\n\n  return data;\n}\n\n/**\n * List all images from connected user\n * @param token\n * @param account_username\n * @returns {Promise<unknown>}\n */\nexport async function getAllImages(token, account_username) {\n  let imagesArr = await axios({\n    method: \"get\",\n    url: `https://api.imgur.com/3/account/${account_username}/images`,\n    responseType: \"json\",\n    headers: {\n      Authorization: \"Bearer \" + token,\n      \"Content-type\": \"application/json\",\n    },\n  })\n    .then((resp) => {\n      return resp.data;\n    })\n    .catch((err) => {\n      // console.log(err);\n    });\n  return imagesArr;\n}\n\nexport async function getFavoriteImage(token, account_username) {\n  const favoriteImageData = await axios({\n    method: \"get\",\n    url: `https://api.imgur.com/3/account/${account_username}/favorites`,\n    responseType: \"json\",\n    headers: {\n      Authorization: \"Bearer \" + token,\n      \"Content-type\": \"application/json\",\n    },\n  }).then((resp) => {\n    return resp.data;\n  });\n\n  return favoriteImageData;\n}\n//\nexport async function getImageFromID(token, account_username, imageID) {\n  const imageData = await axios({\n    method: \"get\",\n    url: `https://api.imgur.com/3/account/${account_username}/image/${imageID}`,\n    responseType: \"json\",\n    headers: {\n      Authorization: \"Bearer \" + token,\n      \"Content-type\": \"application/json\",\n    },\n  })\n    .then((resp) => {\n      return resp.data.data.link;\n    })\n    .catch((err) => {\n      console.log(\"Error\", err);\n    });\n\n  return imageData;\n}\n\nexport async function uploadImage(\n  imageURI,\n  imageType,\n  imageName,\n  imageTitle,\n  imageDescription\n) {\n  var bodyFormData = new FormData();\n\n  bodyFormData.append(\"image\", imageURI);\n  bodyFormData.append(\"album\", null);\n  bodyFormData.append(\"type\", imageType);\n  bodyFormData.append(\"name\", imageName);\n  bodyFormData.append(\"title\", imageTitle);\n  bodyFormData.append(\"description\", imageDescription);\n\n  var token = \"de48853f14f4b2d79213d9e432ba30862df9a7af\";\n  const data = await axios\n    .post(\"https://api.mgur.com/3/upload\", bodyFormData, {\n      headers: {\n        // Authorization: \"Bearer \" + token,\n        \"Client-ID\": CLIENT_ID,\n        \"Content-Type\": \"multipart/form-data\",\n      },\n    })\n    .then((resp) => {\n      console.log(\"Success\", resp);\n      return resp.data;\n    })\n    .catch((err) => {\n      console.log(\"Sorry fail to upload the file\", err);\n    });\n\n  // return data;\n}\n",
+    "static": true,
+    "longname": "D:/Epitech/Epicture/app/Epicture/src/API/IMGUR_API.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "generateNewAccessToken",
+    "memberof": "src/API/IMGUR_API.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/API/IMGUR_API.js~generateNewAccessToken",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/IMGUR_API.js",
+    "importStyle": "{generateNewAccessToken}",
+    "description": "Generate new Token",
+    "lineNumber": 14,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<unknown>}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<unknown>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "name": "getAllImages",
+    "memberof": "src/API/IMGUR_API.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/API/IMGUR_API.js~getAllImages",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/IMGUR_API.js",
+    "importStyle": "{getAllImages}",
+    "description": "List all images from connected user",
+    "lineNumber": 43,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<unknown>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "account_username",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<unknown>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "getFavoriteImage",
+    "memberof": "src/API/IMGUR_API.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/API/IMGUR_API.js~getFavoriteImage",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/IMGUR_API.js",
+    "importStyle": "{getFavoriteImage}",
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "account_username",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "getImageFromID",
+    "memberof": "src/API/IMGUR_API.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/API/IMGUR_API.js~getImageFromID",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/IMGUR_API.js",
+    "importStyle": "{getImageFromID}",
+    "description": null,
+    "lineNumber": 78,
+    "undocument": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "account_username",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "imageID",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "uploadImage",
+    "memberof": "src/API/IMGUR_API.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/API/IMGUR_API.js~uploadImage",
+    "access": "public",
+    "export": true,
+    "importPath": "Epicture/src/API/IMGUR_API.js",
+    "importStyle": "{uploadImage}",
+    "description": null,
+    "lineNumber": 98,
+    "undocument": true,
+    "params": [
+      {
+        "name": "imageURI",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "imageType",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "imageName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "imageTitle",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "imageDescription",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/Store/configureStore.js",
+    "content": "import { createStore } from \"redux\";\r\nimport favoriteReducer from \"./Reducers/favoriteReducer\";\r\n\r\nexport default createStore(favoriteReducer);",
+    "static": true,
+    "longname": "D:/Epitech/Epicture/app/Epicture/src/Store/configureStore.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "kind": "index",
+    "content": "",
+    "longname": "D:\\Epitech\\Epicture\\app\\Epicture\\README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"scripts\": {\n    \"start\": \"react-native start\",\n    \"android\": \"react-native run-android\",\n    \"ios\": \"react-native run-ios\",\n    \"web\": \"expo start --web\",\n    \"eject\": \"expo eject\"\n  },\n  \"dependencies\": {\n    \"@react-native-community/cookies\": \"^5.0.1\",\n    \"@react-native-community/masked-view\": \"^0.1.10\",\n    \"@react-navigation/bottom-tabs\": \"^5.11.8\",\n    \"@react-navigation/native\": \"^5.9.3\",\n    \"axios\": \"^0.21.1\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"expo\": \"~40.0.0\",\n    \"expo-splash-screen\": \"~0.8.0\",\n    \"expo-status-bar\": \"~1.0.3\",\n    \"expo-updates\": \"~0.4.0\",\n    \"moment\": \"^2.29.1\",\n    \"numeral\": \"^2.0.6\",\n    \"react\": \"16.13.1\",\n    \"react-dom\": \"16.13.1\",\n    \"react-native\": \"~0.63.4\",\n    \"react-native-fs-stream\": \"0.0.0\",\n    \"react-native-gesture-handler\": \"^1.10.3\",\n    \"react-native-image-picker\": \"^3.3.2\",\n    \"react-native-reanimated\": \"^2.0.0\",\n    \"react-native-safe-area-context\": \"^3.2.0\",\n    \"react-native-screens\": \"^2.18.1\",\n    \"react-native-unimodules\": \"~0.12.0\",\n    \"react-native-web\": \"~0.13.12\",\n    \"react-native-webview\": \"^11.2.5\",\n    \"react-navigation\": \"^4.4.4\",\n    \"react-navigation-stack\": \"^2.10.4\",\n    \"react-redux\": \"^7.2.2\",\n    \"redux\": \"^4.0.5\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"~7.9.0\",\n    \"babel-jest\": \"~25.2.6\",\n    \"jest\": \"~25.2.6\",\n    \"react-test-renderer\": \"~16.13.1\"\n  },\n  \"private\": true,\n  \"name\": \"Epicture\",\n  \"version\": \"1.0.0\"\n}\n",
+    "longname": "D:\\Epitech\\Epicture\\app\\Epicture\\package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

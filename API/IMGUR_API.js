@@ -6,6 +6,11 @@ import {
 } from "./config";
 import axios from "axios";
 import FsStream from "react-native-fs-stream";
+
+/**
+ * Generate new Token
+ * @returns {Promise<unknown>}
+ */
 export async function generateNewAccessToken() {
   var bodyFormData = new FormData();
 
@@ -29,6 +34,12 @@ export async function generateNewAccessToken() {
   return data;
 }
 
+/**
+ * List all images from connected user
+ * @param token
+ * @param account_username
+ * @returns {Promise<unknown>}
+ */
 export async function getAllImages(token, account_username) {
   let imagesArr = await axios({
     method: "get",
