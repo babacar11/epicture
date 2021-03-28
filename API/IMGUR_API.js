@@ -5,7 +5,7 @@ import {
   ACCOUNT_USERNAME,
 } from "./config";
 import axios from "axios";
-
+import FsStream from "react-native-fs-stream";
 export async function generateNewAccessToken() {
   var bodyFormData = new FormData();
 
@@ -13,22 +13,7 @@ export async function generateNewAccessToken() {
   bodyFormData.append("client_id", CLIENT_ID);
   bodyFormData.append("client_secret", CLIENT_SECRET);
   bodyFormData.append("grant_type", "refresh_token");
-  // bodyFormData.append("response_type", "token");
-
-  // const data = await fetch("https://api.imgur.com/oauth2/token", {
-  //   method: "POST",
-  //   headers: new Headers({
-  //     "Content-Type": "multipart/form-data",
-  //     Accept: "application/json",
-  //   }),
-  //   body: bodyFormData,
-  // })
-  //   .then((resp) => {
-  //     return resp.formData();
-  //   })
-  //   .catch((err) => {
-  //     console.log("Sorry problem");
-  //   });
+  bodyFormData.append("response_type", "token");
 
   const data = await axios
     .post("https://api.imgur.com/oauth2/token", bodyFormData, {
@@ -97,4 +82,40 @@ export async function getImageFromID(token, account_username, imageID) {
     });
 
   return imageData;
+}
+
+export async function uploadImage(
+  imageURI,
+  imageType,
+  imageName,
+  imageTitle,
+  imageDescription
+) {
+  var bodyFormData = new FormData();
+
+  bodyFormData.append("image", imageURI);
+  bodyFormData.append("album", null);
+  bodyFormData.append("type", imageType);
+  bodyFormData.append("name", imageName);
+  bodyFormData.append("title", imageTitle);
+  bodyFormData.append("description", imageDescription);
+
+  var token = "de48853f14f4b2d79213d9e432ba30862df9a7af";
+  const data = await axios
+    .post("https://api.mgur.com/3/upload", bodyFormData, {
+      headers: {
+        // Authorization: "Bearer " + token,
+        "Client-ID": CLIENT_ID,
+        "Content-Type": "multipart/form-data",
+      },
+    })
+    .then((resp) => {
+      console.log("Success", resp);
+      return resp.data;
+    })
+    .catch((err) => {
+      console.log("Sorry fail to upload the file", err);
+    });
+
+  // return data;
 }

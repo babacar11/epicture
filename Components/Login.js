@@ -7,10 +7,10 @@ import {
   StatusBar,
   Image,
   TouchableOpacity,
-  AsyncStorage,
 } from "react-native";
 
 import { WebView } from "react-native-webview";
+
 import { CLIENT_ID } from "../API/config";
 import Navigation from "../Navigation/Navigation";
 import { Provider } from "react-redux";
@@ -31,28 +31,32 @@ class Login extends React.Component {
             CLIENT_ID +
             "&response_type=token",
         }}
-        onError={(err) => {
-          console.log(err);
-        }}
+        // onError={(err) => {
+        //   console.log(err);
+        // }}
         // ref={ref => { this.webView = ref; }}
         originWhitelist={["https://*"]}
         onNavigationStateChange={this.handleWebViewNavigationStateChange}
-        onContentProcessDidTerminate={() => {
-          console.log("Hello");
-        }}
         cacheEnabled={false}
-        sharedCookiesEnabled={false}
+        cacheMode={"LOAD_NO_CACHE"}
         thirdPartyCookiesEnabled={false}
+        sharedCookiesEnabled={false}
+        onRenderProcessGone={(web) => {
+          console.log("Process Gone", web);
+        }}
       />
     );
   }
 
+  _formatToken(url) {}
   handleWebViewNavigationStateChange = (navstate) => {
     let { url } = navstate;
-    if (url.includes("refresh_token")) {
-      console.log("UEL", url);
+    console.log(navstate);
+    if (navstate.url.includes("refresh_token")) {
+      const arr = url.split("&");
 
       this.props.auth();
+      console.log(navstate.url);
     }
   };
 

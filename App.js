@@ -9,13 +9,13 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      isAuthenticated: false,
-      token: "",
+      isAuthenticated: true,
+      refreshToken: "",
     };
   }
 
-  auth_success() {
-    this.setState({ isAuthenticated: true });
+  auth_success(token) {
+    this.setState({ isAuthenticated: true, refreshToken: token });
   }
   disconnect() {
     this.setState({ isAuthenticated: false });
@@ -26,7 +26,7 @@ export default class App extends React.Component {
       return (
         <Login
           auth={this.auth_success.bind(this)}
-          token={this.state.token}
+          token={this.state.refreshToken}
           isAauthenticated={this.state.isAuthenticated}
         />
       );

@@ -52,7 +52,7 @@ class Home extends React.Component {
       })
 
       .catch((err) => {
-        console.log("Sorry");
+        console.log("Sorry can't generate access token", err);
       });
   }
 
